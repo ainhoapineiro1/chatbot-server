@@ -75,6 +75,12 @@ app.get("/", (req, res) => {
   res.send(`<pre>Nothing to see here. Refer to README.md for setup instructions.</pre>`);
 });
 
+// Default route
+app.get("/hello", (req, res) => {
+  res.send(`<pre>HELLO</pre>`);
+});
+
+
 // Start the server
 app.listen(PORT || 3001, () => {
   console.log(`Server is listening on port ${PORT || 3001}`);
