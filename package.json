@@ -2,10 +2,10 @@
   "name": "whatsapp-server",
   "version": "1.0.0",
   "description": "Server app for WhatsApp bot integration using Meta's WhatsApp Cloud API",
-  "main": "src/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node index.js",
     "build": "vite build",
     "dev": "nodemon index.js"
   },
