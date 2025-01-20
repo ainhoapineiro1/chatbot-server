@@ -1,12 +1,19 @@
-import { defineConfig } from 'vite';
-import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
+import path from 'path'
 
 export default defineConfig({
-    build: {
-        outDir: 'dist',
-        rollupOptions: {
-            input: './server.js'
-        }
-    },
-    base: 'chatbot-test',
-});
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: 'src/index.js'
+    }
+  },
+  resolve: {
+    alias: {
+      routes: path.resolve(__dirname, 'src/routes'),
+      controllers: path.resolve(__dirname, 'src/controllers'),
+      utils: path.resolve(__dirname, 'src/utils')
+    }
+  },
+  base: 'chatbot-test'
+})
